@@ -41,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        tools:text="Sample Question"
         android:padding="24dp" />
 
     <LinearLayout
@@ -61,5 +62,12 @@
             android:layout_height="wrap_content"
             android:text="@string/false_button" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/cheat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:text="@string/cheat_button" />
 
 </FrameLayout>
