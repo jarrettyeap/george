@@ -15,12 +15,15 @@ import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class CheatActivity extends AppCompatActivity {
     private static final String EXTRA_ANSWER_IS_TRUE = "co.realityshifters.george.answer_is_true";
     private static final String EXTRA_ANSWER_SHOWN = "co.realityshifters.george.answer_shown";
 
     private boolean mAnswerIsTrue;
     private TextView mAnswerTextView;
+    private TextView mAPILevelView;
     private Button mShowAnswer;
 
     public static Intent newIntent(Context packageContent, boolean answerIsTrue) {
@@ -75,6 +78,9 @@ public class CheatActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mAPILevelView = (TextView) findViewById(R.id.api_level_view);
+        mAPILevelView.setText("API Level " + Build.VERSION.SDK_INT);
     }
 
     private void setAnswerShownResult(boolean isAnswerShown) {
